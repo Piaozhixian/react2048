@@ -22,10 +22,10 @@ gulp.task('jsx', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(styles, ['styles']);
-  gulp.watch(scripts, ['jsx']);
+  gulp.watch(styles, gulp.series('styles'));
+  gulp.watch(scripts, gulp.series('jsx'));
 });
 
-gulp.task('default', ['watch', 'styles', 'jsx']);
+gulp.task('default', gulp.series('watch', 'styles', 'jsx'));
 
-gulp.task('build', ['styles', 'jsx']);
+gulp.task('build', gulp.series('styles', 'jsx'));

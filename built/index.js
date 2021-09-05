@@ -14,7 +14,7 @@ var BoardView = function (_React$Component) {
   function BoardView(props) {
     _classCallCheck(this, BoardView);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BoardView).call(this, props));
+    var _this = _possibleConstructorReturn(this, (BoardView.__proto__ || Object.getPrototypeOf(BoardView)).call(this, props));
 
     _this.state = { board: new Board() };
     return _this;
@@ -119,7 +119,7 @@ var Cell = function (_React$Component2) {
   function Cell() {
     _classCallCheck(this, Cell);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Cell).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Cell.__proto__ || Object.getPrototypeOf(Cell)).apply(this, arguments));
   }
 
   _createClass(Cell, [{
@@ -149,7 +149,7 @@ var TileView = function (_React$Component3) {
   function TileView() {
     _classCallCheck(this, TileView);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(TileView).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TileView.__proto__ || Object.getPrototypeOf(TileView)).apply(this, arguments));
   }
 
   _createClass(TileView, [{
@@ -196,8 +196,8 @@ var TileView = function (_React$Component3) {
 }(React.Component);
 
 var GameEndOverlay = function GameEndOverlay(_ref) {
-  var board = _ref.board;
-  var onRestart = _ref.onRestart;
+  var board = _ref.board,
+      onRestart = _ref.onRestart;
 
   var contents = '';
   if (board.hasWon()) {
